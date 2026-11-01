@@ -39,3 +39,39 @@ APK は `app/build/outputs/apk/debug/app-debug.apk` に出力されます。
 私の pomo を流用しています。
 
 ライセンス: GNU
+---
+
+# Pomo Android (English)
+
+Currently only the Japanese UI is available; an English version is planned.
+
+## Preview
+
+See the screenshots in the Japanese section above.
+
+## Install (APK via USB)
+
+1. In the GitHub **Actions** tab, open "Build APK", pick the latest run (or trigger one with **Run workflow**), then download and unzip the `pomo-android-debug-apk` artifact. It contains `app-debug.apk`.
+2. On your phone, enable **USB debugging** under "Settings > Developer options", and connect it to your PC via USB.
+3. Run the following on your PC (requires [adb](https://developer.android.com/tools/adb)):
+
+   ```
+   adb install app-debug.apk
+   ```
+
+   Without adb, copy the APK to your phone and open it from a file manager (you must allow installing apps from unknown sources).
+
+## Build locally
+
+Open the `pomo-android` directory in Android Studio, or run:
+
+```
+cd pomo-android
+./gradlew assembleDebug
+```
+
+The APK is generated at `app/build/outputs/apk/debug/app-debug.apk`.
+
+This is based on my own pomo.
+
+License: GNU
