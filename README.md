@@ -1,2 +1,3 @@
-# pomo-android
-simple pomodoro android compatible.
+私の pomo を流用しています。
+
+ライセンス: GNU
